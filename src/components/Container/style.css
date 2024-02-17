@@ -1,0 +1,11 @@
+.container-cards {
+    width: 100%;
+    padding: var(--space-1) 0;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    gap: var(--space-1);
+    margin: 0 auto;
+    flex-wrap: wrap;
+    height: calc(100vh - 80px);
+}

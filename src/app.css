@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    /*TAMANHO DE FONTES*/
+    --fs-1: 12px;
+    --fs-2: 16px;
+    --fs-3: 20px;
+    --fs-4: 24px;
+    --fs-5: 28px;
+    --fs-6: 32px;
+
+    /*ESPAÇAMENTOS*/
+    --space-1: 1rem;
+    --space-2: 2rem;
+    --space-3: 3rem;
+    --space-4: 4rem;
+    --space-5: 5rem;
+    --space-6: 6rem;
+
+    /*CORES*/
+    --color-primary: #6a1bb3;
+    --color-primary-hover: #802ecc;
+
+    --color-danger: #ff3d3d;
+    --color-danger-hover: #fd5858;
+
+    --color-white: #FFFFFF;
+    --color-dark: #000000;
+    --color-border: #D6D8DB;
+    --color-card-1: #f8fafc;
+    --color-card-2: #ebebff;
+    --color-card-3: #e3f3fc;
+    --color-card-4: #fbe7e5;
+    --color-card-5: #eef8e8;
+
+    /*BORDER RADIUS*/
+    --border-radius-1: 8px;
+    --border-radius-2: 12px;
+    --border-radius-2: 18px;
+    --border-radius-2: 24px;
+    --border-radius-full: 50%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #222;
+    font-family: "Inter", sans-serif;
+}
+
+.fs-1{
+    font-size: var(--fs-1);
+}
+
+.fs-2{
+    font-size: var(--fs-2);
+}
+
+.fs-3{
+    font-size: var(--fs-3);
+}
+
+.fs-4{
+    font-size: var(--fs-4);
+}
+
+.fs-5{
+    font-size: var(--fs-5);
+}
+
+.fs-6{
+    font-size:var(--fs-6);
+}
+
+.fw-bold{
+    font-weight: 700;
+}
+
+.text-light{
+    color: var(--color-white);
+}
+
+/* Define a aparência da barra de rolagem */
+::-webkit-scrollbar {
+    width: 2px; /* largura da barra de rolagem */
+  }
+  
+  /* Define a aparência da área de fundo da barra de rolagem */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* cor de fundo */
+  }
+  
+  /* Define a aparência do polegar (o indicador de posição da barra de rolagem) */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* cor do polegar */
+    border-radius: 5px; /* borda arredondada do polegar */
+  }
+  
+  /* Define a aparência do polegar ao passar o mouse sobre ele */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* cor do polegar ao passar o mouse sobre ele */
+  }

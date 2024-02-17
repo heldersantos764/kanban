@@ -1,0 +1,28 @@
+.header-admin{
+    background-color: var(--color-primary);
+    padding: 0 var(--space-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.header-admin>.username{
+    display: flex;
+    align-items: center;
+}
+
+.header-admin>.username>span{
+    margin-right: 1rem;
+}
+
+.header-admin .exit{
+    background-color: var(--color-primary);
+    border: none;
+    outline: none;
+}
+
+.header-admin button{
+    border: none;
+    cursor: pointer;
+}

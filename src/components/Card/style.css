@@ -1,0 +1,16 @@
+.card{
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-1);
+    box-shadow: 0px 1px 4px 0px #00000040;
+    padding: .5rem;
+}
+
+.card .title{
+    font-size: var(--fs-2);
+    font-weight: bold;
+}
+
+.card .description{
+    margin: .3rem 0;
+    font-size: var(--fs-1);
+}

@@ -1,0 +1,25 @@
+.board{
+    width: 260px;
+    min-width: 260px;
+    height: 100%;
+}
+
+.board>.title{
+    font-size: var(--fs-3);
+    font-weight: bold;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.board .cards{
+    display: flex;
+    margin-bottom: var(--space-1);
+    flex-direction: column;
+    gap: .5rem;
+    padding: var(--space-1);
+    border-radius: var(--border-radius-1);
+    border: 2px solid var(--color-border);
+    height: calc(100% - 40px - var(--space-1));
+    overflow-y: auto;
+}
