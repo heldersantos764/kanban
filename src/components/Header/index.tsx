@@ -2,9 +2,7 @@ import { FC } from "react";
 import { IoExitOutline } from "react-icons/io5";
 import "./style.css";
 
-interface Props {}
-
-const Header: FC<Props> = (props) => {
+const Header: FC = () => {
   return (
     <header className="header-admin">
       <div className="title fw-bold text-light fs-3">KanbanFlow</div>
