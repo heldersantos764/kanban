@@ -1,4 +1,5 @@
 import React, { FC, ReactNode } from "react";
+import ButtonNewCard from "../ButtonCard";
 import Card from "../Card";
 import "./style.css"
 
@@ -13,9 +14,9 @@ const Board: FC<Props> = (props) => {
   return (
     <div className="board">
       <div className="title">{props.title}</div>
-      <div className="cards" style={{backgroundColor: props.background}}>
+      <div className="cards" style={{backgroundColor: props.background}}> 
         {React.Children.map(props.children, (child) => {
-          if (React.isValidElement(child) && child.type === Card) {
+          if (React.isValidElement(child) && child.type === Card || ButtonNewCard()) {
             return child;
           } else {
             return null;

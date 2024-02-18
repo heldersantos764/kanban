@@ -3,73 +3,27 @@ import Board from "./components/Board";
 import Card from "./components/Card";
 import Container from "./components/Container";
 import Header from "./components/Header";
+import ButtonNewCard from "./components/ButtonCard";
+
 
 function App() {
   return (
     <div>
       <Header/>
+      
       <Container>
+      
         <Board title="A Fazer" id={1} background="#f8fafc">
-          <Card
-            id={1}
-            title="Titulo teste"
-            description="descrição de teste"
-            deleteFunction={() => {}}
-          />
-          <Card
-            id={1}
-            title="Titulo teste"
-            description="descrição de teste"
-            deleteFunction={() => {}}
-          />
-          <Card
-            id={1}
-            title="Titulo teste"
-            description="descrição de teste"
-            deleteFunction={() => {}}
-          />
+        <ButtonNewCard />
+        </Board>
+        
+
+        <Board title="Fazendo" id={2} background="#fbe7e5">
+        <ButtonNewCard />
         </Board>
 
-        <Board title="Fazendo" id={1} background="#fbe7e5">
-          <Card
-            id={1}
-            title="Titulo teste"
-            description="descrição de teste"
-            deleteFunction={() => {}}
-          />
-          <Card
-            id={1}
-            title="Titulo teste"
-            description="descrição de teste"
-            deleteFunction={() => {}}
-          />
-        </Board>
-
-        <Board title="Feito" id={1} background="#eef8e8">
-          <Card
-            id={1}
-            title="Titulo teste"
-            description="descrição de teste"
-            deleteFunction={() => {}}
-          />
-          <Card
-            id={1}
-            title="Titulo teste"
-            description="descrição de teste"
-            deleteFunction={() => {}}
-          />
-          <Card
-            id={1}
-            title="Titulo teste"
-            description="descrição de teste"
-            deleteFunction={() => {}}
-          />
-          <Card
-            id={1}
-            title="Titulo teste"
-            description="descrição de teste"
-            deleteFunction={() => {}}
-          />
+        <Board title="Feito" id={3} background="#eef8e8">
+        <ButtonNewCard />
         </Board>
       </Container>
     </div>
