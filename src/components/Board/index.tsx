@@ -1,16 +1,11 @@
-import React, { FC, ReactNode } from "react";
+import React, { FC } from "react";
 import ButtonNewCard from "../ButtonCard";
 import Card from "../Card";
 import "./style.css"
+import { BoardProps } from "../../Interfaces";
 
-interface Props {
-  children: ReactNode;
-  title: string;
-  id: number;
-  background: string;
-}
 
-const Board: FC<Props> = (props) => {
+const Board: FC<BoardProps> = (props) => {
   return (
     <div className="board">
       <div className="title">{props.title}</div>

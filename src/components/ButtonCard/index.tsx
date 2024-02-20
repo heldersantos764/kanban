@@ -1,13 +1,8 @@
 import { useState } from 'react';
 import { FaPlusCircle } from "react-icons/fa"
-import Card from '../Card'; // Make sure to import the Card component
+import Card from '../Card'; 
+import { CardProps } from '../../Interfaces';
 
-interface CardProps {
-  id: number;
-  title: string;
-  description: string;
-  deleteFunction: (id: number) => void;
-}
 
 function ButtonNewCard() {
   const [cards, setCards] = useState<CardProps[]>([]);

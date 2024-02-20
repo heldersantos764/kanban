@@ -1,14 +1,9 @@
 import { FC, useState } from "react";
 import './style.css'
+import { CardProps } from "../../Interfaces";
 
-interface Props {
-  id: number;
-  title: string;
-  description: string;
-  deleteFunction: (id: number) => void;
-}
 
-const Card: FC<Props> = (props) => {
+const Card: FC<CardProps> = (props) => {
 
   const [title, setTitle] = useState<string>(props.title);
   const [description, setDescription] = useState<string>(props.description);
