@@ -1,0 +1,25 @@
+.container-login{
+    background-color: var(--color-primary);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-login form{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    background-color: #fff;
+    width: 300px;
+    height: 400px;
+    padding: var(--space-2);
+    border-radius: var(--border-radius-1);
+    align-items: center;
+}
+
+.container-login div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}

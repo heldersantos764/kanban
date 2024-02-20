@@ -102,3 +102,37 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #555; /* cor do polegar ao passar o mouse sobre ele */
   }
+
+  .form-control{
+    padding: 10px 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input.form-control:focus {
+    outline: none;
+    border: 1px solid var(--color-primary);
+}
+
+label {
+    margin-bottom: 3px;
+}
+
+.btn {
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.btn-primary{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover{
+    background-color: var(--color-primary-hover);
+}
+
+.link:hover{
+    text-decoration: underline;
+}
