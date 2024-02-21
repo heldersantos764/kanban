@@ -70,7 +70,17 @@ const Admin: FC = () => {
   }
 
   const handleDeleteCard = (boardId: number, cardId: number) => {
-    boards[boardId-1].cards = boards[boardId].cards.filter(card => card.id !== cardId)
+    setBoards(prevBoards => {
+      return prevBoards.map(board => {
+        if (board.id === boardId) {
+          return {
+            ...board,
+            cards: board.cards.filter(card => card.id !== cardId)
+          };
+        }
+        return board;
+      });
+    });
   }
 
   /**
