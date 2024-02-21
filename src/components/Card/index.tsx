@@ -10,7 +10,9 @@ const Card: FC<CardProps> = (props) => {
   const [isEditing, setIsEditing] = useState<boolean>(false);
 
   const handleClickDelete = () => {
-    props.onDelete(props.boardId, props.id);
+    if(confirm(`Deseja realmente excluir o Card de título ${title}?`)){
+      props.onDelete(props.boardId, props.id);
+    }
   };
 
   const handleClickEdit = () => {
@@ -37,18 +39,20 @@ const Card: FC<CardProps> = (props) => {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             className="form-control mb-1"
+            placeholder="Título"
           />
           <textarea
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             className="form-control mb-1 full-width"
+            placeholder="Descrição"
           />
           <button onClick={handleSave}>Salvar</button>
         </>
       ) : (
         <>
-          <div className="title">{title}</div>
-          <div className="description">{description}</div>
+          <div className="title">{title ? title : "Título"}</div>
+          <div className="description">{description ? description : "Descrição"}</div>
           <button onClick={handleClickEdit}>
             <FiEdit />
           </button>

@@ -50,8 +50,8 @@ const Admin: FC = () => {
         if (board.id === boardId) {
           const newCard = {
             id: board.cards.length + 1,
-            title: "Título",
-            description: "Descrição",
+            title: "",
+            description: "",
           };
 
           return {
