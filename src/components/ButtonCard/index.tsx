@@ -1,7 +1,10 @@
 import { useState } from 'react';
-import { FaPlusCircle } from "react-icons/fa"
+import { BiAddToQueue } from "react-icons/bi";
 import Card from '../Card'; 
+import './style.css';
 import { CardProps } from '../../Interfaces';
+const style = { color: "--color-white", fontSize: "1.3em", backgroundColor: "white"}
+
 
 
 function ButtonNewCard() {
@@ -10,9 +13,10 @@ function ButtonNewCard() {
   const handleAddCard = () => {
     const newCard: CardProps = {
       id: cards.length + 1,
-      title: 'Vindo do button',
-      description: 'descrição de teste',
+      title: 'Título',
+      description: 'Descreva a tarefa',
       deleteFunction: deleteCard,
+      editFunction: ()=>{},
     };
 
     setCards([...cards, newCard]);
@@ -25,8 +29,8 @@ function ButtonNewCard() {
 
   return (
     <>
-      <button type="button" onClick={handleAddCard}>
-      <FaPlusCircle />
+      <button type="button" className="addButton" onClick={handleAddCard}>
+      <BiAddToQueue style={style}/>
       </button>
       <div>
         {cards.map((card) => (
@@ -36,6 +40,7 @@ function ButtonNewCard() {
             title={card.title}
             description={card.description}
             deleteFunction={card.deleteFunction}
+            editFunction={()=>{}}
           />
         ))}
       </div>

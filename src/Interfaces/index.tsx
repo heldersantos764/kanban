@@ -5,6 +5,7 @@ export interface CardProps {
     title: string;
     description: string;
     deleteFunction: (id: number) => void;
+    editFunction: (id: number, title: string, description: string) => void;
   }
 
 
@@ -15,3 +16,4 @@ export interface CardProps {
     background: string;
   }  
   
+

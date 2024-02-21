@@ -14,3 +14,7 @@
     margin: .3rem 0;
     font-size: var(--fs-1);
 }
+
+button{
+    margin-right: .5rem;
+}

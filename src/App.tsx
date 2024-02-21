@@ -1,6 +1,5 @@
 import "./app.css";
 import Board from "./components/Board";
-import Card from "./components/Card";
 import Container from "./components/Container";
 import Header from "./components/Header";
 import ButtonNewCard from "./components/ButtonCard";

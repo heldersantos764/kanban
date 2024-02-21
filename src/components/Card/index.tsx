@@ -1,15 +1,11 @@
 import { FC, useState } from "react";
 import './style.css';
+import { CardProps } from "../../Interfaces";
+import { FiEdit } from "react-icons/fi";
+import { MdOutlineDelete } from "react-icons/md";
 
-interface Props {
-  id: number;
-  title: string;
-  description: string;
-  deleteFunction: (id: number) => void;
-  editFunction: (id: number, title: string, description: string) => void;
-}
 
-const Card: FC<Props> = (props) => {
+const Card: FC<CardProps> = (props) => {
   const [title, setTitle] = useState<string>(props.title);
   const [description, setDescription] = useState<string>(props.description);
   const [isEditing, setIsEditing] = useState<boolean>(false);
@@ -46,8 +42,8 @@ const Card: FC<Props> = (props) => {
         <>
           <div className="title">{title}</div>
           <div className="description">{description}</div>
-          <button onClick={handleClickEdit}>Editar</button>
-          <button onClick={handleClickDelete}>Excluir</button>
+          <button onClick={handleClickEdit}><FiEdit /></button>
+          <button onClick={handleClickDelete}><MdOutlineDelete /></button>
         </>
       )}
     </div>
