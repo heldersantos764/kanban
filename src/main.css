@@ -46,7 +46,6 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    color: #222;
     font-family: "Inter", sans-serif;
 }
 
@@ -103,10 +102,13 @@
     background: #555; /* cor do polegar ao passar o mouse sobre ele */
   }
 
-  .form-control{
+.form-control{
     padding: 10px 6px;
     border: 1px solid #ccc;
     border-radius: 3px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
 }
 
 input.form-control:focus {
@@ -135,4 +137,16 @@ label {
 
 .link:hover{
     text-decoration: underline;
+}
+
+.full-width{
+    width: 100%;
+}
+
+.mt-1{
+    margin-top: 1rem;
+}
+
+.mb-1{
+    margin-bottom: 1rem;
 }

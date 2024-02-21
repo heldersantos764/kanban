@@ -9,7 +9,7 @@ const Header: FC = () => {
       <div className="username">
         <span className="text-light">Nome do usuário</span>
         <button>
-          <IoExitOutline size={30} />
+          <IoExitOutline size={30} color="white"/>
         </button>
       </div>
     </header>

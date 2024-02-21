@@ -25,4 +25,5 @@
 .header-admin button{
     border: none;
     cursor: pointer;
+    background-color: var(--color-primary);
 }
