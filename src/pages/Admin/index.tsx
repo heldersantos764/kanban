@@ -64,6 +64,15 @@ const Admin: FC = () => {
     });
   };
 
+  const handleEditCard = (boardId: number, id: number, title: string, description: string) => {
+    boards[boardId-1].cards[id-1].title = title;
+    boards[boardId-1].cards[id-1].description = description;
+  }
+
+  const handleDeleteCard = (boardId: number, cardId: number) => {
+    boards[boardId-1].cards = boards[boardId].cards.filter(card => card.id !== cardId)
+  }
+
   /**
    * sempre que ocorrer uma alteração na lista de cards
    * os dados devem ser salvos na base de dados
@@ -93,8 +102,8 @@ const Admin: FC = () => {
                 boardId={board.id}
                 title={card.title}
                 description={card.description}
-                onEdit={() => {}}
-                onDelete={() => {}}
+                onEdit={handleEditCard}
+                onDelete={handleDeleteCard}
               />
             ))}
           </Board>

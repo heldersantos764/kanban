@@ -5,8 +5,8 @@ export interface CardProps {
   title: string;
   description: string;
   boardId: number;
-  onDelete: (id: number) => void;
-  onEdit: (id: number, title: string, description: string) => void;
+  onDelete: (boardId: number, id: number) => void;
+  onEdit: (boardId: number, id: number, title: string, description: string) => void;
 }
 
 export interface BoardProps {
