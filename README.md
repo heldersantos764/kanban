@@ -1,4 +1,4 @@
-# CanvaFlow
+# KanbanFlow
 
 Sistema desenvolvido com React + Vite para simulação de quadro Kanban para o módulo 05 do curso de front-end da AdaTech em parceria com Ifood.
 
