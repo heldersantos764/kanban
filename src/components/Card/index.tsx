@@ -47,17 +47,17 @@ const Card: FC<CardProps> = (props) => {
             className="form-control mb-1 full-width"
             placeholder="Descrição"
           />
-          <button onClick={handleSave}>Salvar</button>
+          <button onClick={handleSave} className="btn btn-primary">Salvar</button>
         </>
       ) : (
         <>
           <div className="title">{title ? title : "Título"}</div>
           <div className="description">{description ? description : "Descrição"}</div>
-          <button onClick={handleClickEdit}>
-            <FiEdit />
+          <button onClick={handleClickEdit} className="btn btn-primary btn-circle">
+            <FiEdit size={14}/>
           </button>
-          <button onClick={handleClickDelete}>
-            <MdOutlineDelete />
+          <button onClick={handleClickDelete} className="btn btn-danger btn-circle">
+            <MdOutlineDelete size={14}/>
           </button>
         </>
       )}

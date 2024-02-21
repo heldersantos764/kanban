@@ -135,6 +135,20 @@ label {
     background-color: var(--color-primary-hover);
 }
 
+.btn-danger{
+    background-color: var(--color-danger);
+    color: var(--color-white);
+}
+
+.btn-danger:hover{
+    background-color: var(--color-danger-hover);
+}
+
+.btn-circle{
+    border-radius: 50%;
+    padding: 5px 6px;
+}
+
 .link:hover{
     text-decoration: underline;
 }
