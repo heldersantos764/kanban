@@ -1,5 +1,6 @@
 import { FC } from "react";
 import "./style.css";
+import { Link, Outlet } from "react-router-dom";
 
 interface Props {}
 
@@ -7,7 +8,7 @@ const Register: FC<Props> = (props) => {
   return (
     <div className="container-register">
       <form action="">
-        <h1>Login</h1>
+        <h1>Cadastre-se</h1>
 
         <div>
           <label htmlFor="email">E-mail</label>
@@ -33,15 +34,28 @@ const Register: FC<Props> = (props) => {
         </div>
 
         <div>
+          <label htmlFor="password-verify">Repetir Senha</label>
+          <input
+            type="password"
+            name="password-verify"
+            id="password-verify"
+            className="form-control"
+            placeholder="Repita sua senha"
+          />
+        </div>
+
+        <div>
           <button type="submit" className="btn btn-primary">
-            Entrar
+            Cadastrar-se
           </button>
         </div>
 
         <div>
-          <a href="#" className="link">Cadastre-se</a>
+          <Link to='/'>Voltar para login</Link>
         </div>
       </form>
+
+      <Outlet/>
     </div>
   );
 };

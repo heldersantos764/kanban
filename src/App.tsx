@@ -1,9 +1,13 @@
+import Router from "./Router";
 import Admin from "./pages/Admin";
 
 function App() {
   return (
-    <Admin />
-  )
+    <>
+      {/* <Router /> */}
+      <Admin/>
+    </>
+  );
 }
 
 export default App;

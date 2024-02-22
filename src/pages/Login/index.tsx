@@ -1,12 +1,22 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import "./style.css";
+import { Link, Outlet } from "react-router-dom";
+import { useAuth } from "../../providers/AuthProvider";
 
 interface Props {}
 
 const Login: FC<Props> = (props) => {
+
+  const { login } = useAuth();
+
+  const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    login();
+  };
+
   return (
     <div className="container-login">
-      <form action="" className="form-login">
+      <form action="" onSubmit={handleLogin} className="form-login">
         <h1>Login</h1>
 
         <div>
@@ -39,9 +49,12 @@ const Login: FC<Props> = (props) => {
         </div>
 
         <div>
-          <a href="#" className="link">Cadastre-se</a>
+          <Link to="/register">Cadastre-se</Link>
         </div>
       </form>
+
+      <Outlet/>
+
     </div>
   );
 };

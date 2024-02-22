@@ -34,3 +34,13 @@ export interface BoardData {
   background: string;
   cards: CardData[];
 }
+
+export interface AuthContextType {
+  isLoggedIn: boolean;
+  login: () => void;
+  logout: () => void;
+}
+
+export interface AuthProviderProps {
+  children: any;
+}
