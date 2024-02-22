@@ -44,3 +44,10 @@ export interface AuthContextType {
 export interface AuthProviderProps {
   children: any;
 }
+
+export interface User {
+  id: number;
+  name: string;
+  email: string;
+  password: string;
+}

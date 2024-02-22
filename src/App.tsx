@@ -1,11 +1,9 @@
 import Router from "./Router";
-import Admin from "./pages/Admin";
 
 function App() {
   return (
     <>
-      {/* <Router /> */}
-      <Admin/>
+      <Router />
     </>
   );
 }

@@ -81,6 +81,10 @@
     color: var(--color-white);
 }
 
+.text-center{
+    text-align: center;
+}
+
 /* Define a aparência da barra de rolagem */
 ::-webkit-scrollbar {
     width: 2px; /* largura da barra de rolagem */
@@ -163,4 +167,9 @@ label {
 
 .mb-1{
     margin-bottom: 1rem;
+}
+
+.py-1{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
