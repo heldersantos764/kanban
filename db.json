@@ -9,42 +9,19 @@
         "id": 1,
         "title": "A Fazer",
         "background": "#f8fafc",
-        "cards": [
-          {
-            "id": 1,
-            "title": "Helder",
-            "description": "1321321321321"
-          }
-        ]
+        "cards": []
       },
       {
         "id": 2,
         "title": "Fazendo",
         "background": "#fbe7e5",
-        "cards": [
-          {
-            "id": 1,
-            "title": "",
-            "description": ""
-          }
-        ]
+        "cards": []
       },
       {
         "id": 3,
         "title": "Feito",
         "background": "#eef8e8",
-        "cards": [
-          {
-            "id": 1,
-            "title": "teste",
-            "description": "lkdjsldkfjsdf"
-          },
-          {
-            "id": 2,
-            "title": "Helder",
-            "description": "descrição de helder"
-          }
-        ]
+        "cards": []
       }
     ]
   }
