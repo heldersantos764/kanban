@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { useNavigate } from "react-router-dom";
+import "./style.css";
 
 const NotFound: FC = () => {
     const navigate = useNavigate();
@@ -9,8 +10,8 @@ const NotFound: FC = () => {
   };
 
   return (
-    <div>
-      <div>Página 404</div>
+    <div className="error-page">
+      <div className="message">Página 404</div>
       <button onClick={handleGoBack}>Voltar</button>
     </div>
   );

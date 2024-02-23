@@ -45,9 +45,18 @@ export interface AuthProviderProps {
   children: any;
 }
 
+export interface Boards {
+  id: number;
+  title: string;
+  background: string;
+  cards: any[];
+}
+
 export interface User {
   id: number;
   name: string;
   email: string;
   password: string;
+  boards: Boards[];
 }
+

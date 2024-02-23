@@ -4,8 +4,10 @@ import Container from "../../components/Container";
 import Board from "../../components/Board";
 import Card from "../../components/Card";
 import { BoardData } from "../../Interfaces";
+import { getBoards, updateUserBoards } from "../../api/requests";
 
 const Admin: FC = () => {
+
   const [boards, setBoards] = useState<BoardData[]>([
     { id: 1, title: "A Fazer", background: "#f8fafc", cards: [] },
     { id: 2, title: "Fazendo", background: "#fbe7e5", cards: [] },
@@ -67,6 +69,7 @@ const Admin: FC = () => {
   const handleEditCard = (boardId: number, id: number, title: string, description: string) => {
     boards[boardId-1].cards[id-1].title = title;
     boards[boardId-1].cards[id-1].description = description;
+    updateUserBoards(boards);
   }
 
   const handleDeleteCard = (boardId: number, cardId: number) => {
@@ -83,13 +86,24 @@ const Admin: FC = () => {
     });
   }
 
-  /**
-   * sempre que ocorrer uma alteração na lista de cards
-   * os dados devem ser salvos na base de dados
-   */
+ useEffect(() => {
+    const fetchBoards = async () => {
+      try {
+        const boards = await getBoards();
+        setBoards(boards);
+      } catch (error) {
+        console.error('Error fetching boards:', error);
+      }
+    };
+  
+    fetchBoards();
+  }, []);
+
   useEffect(() => {
-    console.log(boards);
-  }, boards);
+    if (typeof updateUserBoards === 'function') {
+      updateUserBoards(boards);
+    }
+  }, [boards, updateUserBoards]);
 
   return (
     <div>
